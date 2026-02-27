@@ -17,6 +17,19 @@ composer require hubleto/mcp-server
   3. Run the server
     `php mcp-server.php`
 
+## Integration with an IDE AI agent
+
+Different IDEs use different methods to register MCP servers. If you're using Visual Studio Code, add the following record under servers in `.vscode/mcp.json`
+```json
+		"hubleto mcp server": {
+			"type": "stdio",
+			"command": "php",
+			"args": [
+				"mcp-server.php"
+			]
+		}
+```
+
 ## How to test
 
 **Option 1: `npx @modelcontextprotocol/inspector`**
